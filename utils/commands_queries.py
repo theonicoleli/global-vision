@@ -33,7 +33,7 @@ def fetch_priority_distribution():
 
 def plot_priority_distribution(priority_counts):
     plt.figure(figsize=(8, 6))
-    sns.barplot(data=priority_counts, x='case_priority', y='count', palette='viridis')
+    sns.barplot(data=priority_counts, x='case_priority', y='count', color='blue')
     plt.title("Distribution of Cases by Priority")
     plt.xlabel("Priority")
     plt.ylabel("Number of Cases")
@@ -186,7 +186,7 @@ def unique_values(table_name):
 
 def visualize_case_priority(priority_counts):
     plt.figure(figsize=(8, 6))
-    sns.barplot(data=priority_counts, x="case_priority", y="count", palette="viridis")
+    sns.barplot(data=priority_counts, x='case_priority', y='count', color='blue')
     plt.title("Case Priority Distribution")
     plt.xlabel("Case Priority")
     plt.ylabel("Number of Cases")
