@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  db_loader:
+    build: .
+    container_name: db_loader_container
+    volumes:
+      - "./:/app"
+    command: ["sh", "-c", "python load_json_into_sqlite.py && tail -f /dev/null"]
+
+volumes:
+  db_data:
